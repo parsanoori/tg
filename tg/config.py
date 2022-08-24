@@ -12,13 +12,13 @@ _darwin = "Darwin"
 _linux = "Linux"
 
 
-CONFIG_DIR = os.path.expanduser("~/.config/tg/")
+CONFIG_DIR = os.path.expanduser("/config/")
 CONFIG_FILE = os.path.join(CONFIG_DIR, "conf.py")
-FILES_DIR = os.path.expanduser("~/.cache/tg/")
+FILES_DIR = os.path.expanduser("/data")
 MAILCAP_FILE: Optional[str] = None
 
 LOG_LEVEL = "INFO"
-LOG_PATH = os.path.expanduser("~/.local/share/tg/")
+LOG_PATH = os.path.expanduser("/log")
 
 API_ID = "559815"
 API_HASH = "fd121358f59d764c57c55871aa0807ca"
@@ -78,7 +78,7 @@ KEEP_MEDIA = 7
 
 FILE_PICKER_CMD = "ranger --choosefile={file_path}"
 
-DOWNLOAD_DIR = os.path.expanduser("~/Downloads/")
+DOWNLOAD_DIR = os.path.expanduser("/downloads")
 
 if os.path.isfile(CONFIG_FILE):
     config_params = runpy.run_path(CONFIG_FILE)  # type: ignore
